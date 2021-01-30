@@ -1,5 +1,5 @@
 ## README
-To try it live, go to.
+To try it live, go to https://avneeshsarwate.github.io/textDrag/
 
 Instructions
 1. Add text into the text entry. 
