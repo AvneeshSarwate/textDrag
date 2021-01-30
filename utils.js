@@ -61,7 +61,7 @@ function makeDraggable(dragItem, container) {
 
             // setTranslate(currentX, currentY, dragItem);
             dragItem.style.transform = `translate(${currentX}px, ${currentY}px)`;
-            console.log("drag", currentX, currentY);
+            // console.log("drag", currentX, currentY);
         }
     }
 
