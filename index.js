@@ -8,9 +8,16 @@ let textEntry = document.getElementById('textEntry');
 let renderButton = document.getElementById('renderTextButton');
 renderButton.onclick = () => {
     textContainer.innerHTML = '';
-    let wordSpans = textEntry.value.split(" ")
-                    .map(w => elemFromString(`<span class="ib">${w} </span>`));
-    wordSpans.forEach(s => makeDraggable(s, document));
-    wordSpans.forEach(s => textContainer.appendChild(s));
 
+    let wordsAndSpaces = Array.from(textEntry.value.matchAll(/[^\s]+|\s+/g)).map(m => m[0])
+
+    let wordSpans = wordsAndSpaces.map((w, i) => {
+        if(w.match(/\s+/)) return w;
+        else return `<span class="ib">${w} </span>`;
+    });
+    textContainer.innerHTML = wordSpans.join('');
+    let spans = document.getElementsByTagName('span');
+    for(let s of spans){
+        makeDraggable(s, document);
+    }
 };
