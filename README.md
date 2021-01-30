@@ -1,6 +1,7 @@
 ## README
 To try it live, go to https://avneeshsarwate.github.io/textDrag/.
-Try not to paste huge amounts of text. 
+
+Try not to paste huge amounts of text for performance reasons, but should be fine up to a couple thousand words. 
 
 Instructions
 1. Add text into the text entry. 
